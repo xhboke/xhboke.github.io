@@ -17,6 +17,10 @@
 
 
 
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
 
 
 
@@ -410,6 +414,16 @@ mjx-container[display="true"] + br {
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2021/06/06/20210606/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2021/06/06/20210606/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -428,12 +442,24 @@ mjx-container[display="true"] + br {
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  
+                  1.1k
                 </span>
               
 
               
+                <span class="post-meta-divider">|</span>
+              
 
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
               
             </div>
           
@@ -447,7 +473,7 @@ mjx-container[display="true"] + br {
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -665,6 +691,14 @@ mjx-container[display="true"] + br {
           
 
   
+    <div class="comments" id="comments">
+      
+        <div onclick="showGitment()" id="gitment-display-button">显示 Gitment 评论</div>
+        <div id="gitment-container" style="display:none"></div>
+      
+    </div>
+
+  
 
 
 
@@ -810,6 +844,15 @@ mjx-container[display="true"] + br {
   </span>
   <span class="author" itemprop="copyrightHolder">Xhboke</span>
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">17.7k</span>
   
 </div>
 
@@ -963,6 +1006,52 @@ mjx-container[display="true"] + br {
 
 
 
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+      <style>
+        a.gitment-editor-footer-tip { display: none; }
+        .gitment-container.gitment-footer-container { display: none; }
+      </style>
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: '38235544',
+            repo: 'https://github.com/xhboke/xhboke.github.io',
+            
+            lang: "zh-Hans" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '564122c2da7b1533e8cb521d39a2380d9e1dd069',
+            
+                client_id: 'Ov23lij7URItBCat1pbd'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
+      
+      </script>
+    
 
 
 
